@@ -19,30 +19,42 @@ router.get('/', function (req, res, next) {
   res.send('respond with a resource');
 });
 
+
+
+//登入
+
 router.post("/login", (req, res) => {
   var body = req.body;
-  console.log(body)
+  console.log(body);
 
   conn((err, db) => {
-    setError(err, res, db);
-    var finData = function (db, callback) {
-      db.collection("admin").findOne(body, {}, (err, result) => {
+    setError(err, res, db); // 封装 错误 回调函数 
+    var findData = function (db, callback) {
+      db.collection("users").findOne(body, {}, (err, result) => {
         setError(err, res, db);
-        callback(result);
+        callback(result)
       })
     }
 
-    finData(db, (result) => {
+    findData(db, (result) => {
       if (result) {
         console.log(req.session);
-        req.session.admin = body.admin;
+        req.session.username = body.username;
+        req.session.date = new Date();
         res.redirect("/");
       } else {
-        res.send(`<script>alert("登录失败,请重新登录!");location.href='/login?admin=${body.admin}'</script>`)
+        res.send(`<script>alert("登录失败,请重新登录!");location.href='/login?username=${aesEncrypt(body.username,keys)}'</script>`)
       }
+      db.close();
     })
+
+
   })
+  // 查询 
 })
+
+
+
 
 
 

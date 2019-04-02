@@ -14,19 +14,21 @@ var {
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', {
-    title: 'Express',
-    admin: req.session.admin
+    title: 'Express'
   });
+  console.log(req.session)
 });
 
 router.get("/login", (req, res) => {
-  var admin = req.query.admin || "";
-
-
-
-  res.render("login")
+  var username = req.query.username || "";
+  console.log(username);
+  username = username ? aesDecrypt(username, keys) : username;
+  // 解密  
+  res.render("login.ejs", {
+    msg: "接收数据  从 数据库 查询处理的结果 ",
+    username
+  });
 })
-
 
 
 
