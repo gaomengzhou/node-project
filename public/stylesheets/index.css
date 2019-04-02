@@ -1,0 +1,175 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+input,
+button,
+textarea {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: #9cdcf8;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.cl:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.cl {
+    zoom: 1;
+}
+
+#box {
+    width: 550px;
+    height: 270px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -225px;
+    margin-top: -135px;
+}
+
+#box1 {
+    width: 550px;
+    height: 180px;
+    border-radius: 10px;
+    background: linear-gradient(#b6e6fd, #9cdcf8);
+    position: relative;
+}
+
+#box1-top {
+    border-radius: 10px 10px 0 0;
+    height: 90px;
+    background: linear-gradient(#e0eaeb, #a7dbf3);
+}
+
+#box1-bottom {
+    border-radius: 0 0 10px 10px;
+    height: 90px;
+    background: linear-gradient(#72cffa, #d1edfb);
+    border-bottom: 3px solid #bfd5e2;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+#box1-top {
+    border-radius: 10px 10px 0 0;
+    height: 90px;
+    background: linear-gradient(#e0eaeb, #a7dbf3);
+}
+
+#login {
+    width: 220px;
+    height: 220px;
+    border: 2px solid #86d4fb;
+    position: absolute;
+    bottom: 0;
+    left: 275px;
+    border-radius: 10px;
+    background-color: #e1eef4;
+    opacity: 0.7;
+
+}
+
+#login .login1 {
+    width: 220px;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    color: #4da9d2;
+    font-size: 20px;
+
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    opacity: 0.7;
+    left: 20px;
+}
+
+#login input {
+    width: 130px;
+    height: 24px;
+    border: none;
+    border: 1px solid #4da9d2;
+    font-size: 16px;
+}
+
+#user {
+    margin-top: 10px;
+}
+
+#user span {
+    display: inline-block;
+    width: 60px;
+    font-size: 14px;
+    color: #25699a;
+    margin-left: 10px;
+
+}
+
+#pwd {
+    margin-top: 10px;
+}
+
+#pwd span {
+    display: inline-block;
+    width: 60px;
+    font-size: 14px;
+    color: #25699a;
+    margin-left: 10px;
+
+}
+
+#btn {
+    width: 80px;
+    height: 25px;
+    border: 1px solid #4da9d2;
+    border-radius: 20px;
+    line-height: 25px;
+    color: #2f718b;
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+#hint {
+    width: 220px;
+    height: 20px;
+    text-align: center;
+}
+
+#btn:focus {
+    outline: none;
+}

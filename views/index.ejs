@@ -1,11 +1,176 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="../css/Reset.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <div id="header" class="header">
+        <div class="top center">
+            <div class="logo lf">
+                <h3>协同办公管理平台</h3>
+                <h4>考勤子系统</h4>
+            </div>
+            <span class="fr"><a href="#">退出</a></span>
+            <span class="fr"><a href="#">个人信息</a></span>
+            <div class="selected">
+                <p class="userAdmin fl"><a href="#">用户管理</a></p>
+                <p class="departmentAdmin fl"><a href="DepartmentManagement.html" id="">部门管理</a></p>
+                <p class="attendanceSettings fl"><a href="#">考勤设置</a></p>
+            </div>
+        </div>
+        <p class="bottom">当前位置:用户管理</p>
+    </div>
+    <div class="mainBox">
+        <div class="main center">
+            <div class="maintop"></div>
+            <div class="login center">
+                <form action="get" class="loginInput fl">
+                    <label for="useridInput">用户ID : </label><input type="text" id="useridInput">
+                    <label for="usernameInput">用户名 : </label><input type="text" id="usernameInput">
+                    <span>部门 : </span>
+                </form>
+                <div class="checkedBox fl">
+                    <div>
+                        <input class="user_title" id="szinput" type="checkbox" name="check" value="素质拓展部">素质拓展部
+                        <input class="user_title" id="sxinput" type="checkbox" name="check" value="实训中心">实训中心
+                        <input class="user_title" id="jlinput" type="checkbox" name="check" value="景宁人力">景宁人力
+                        <input class="user_title" id="ddinput" type="checkbox" name="check" value="督导部">督导部
+                        <input class="user_title" id="wrinput" type="checkbox" name="check" value="武软共建学习教育部">武软共建学习教育部
+                    </div>
+                </div>
+                <button class="fr" id="search_btn">查询</button>
+            </div>
+            <div class="listbox">
+                <div class="list center">
+                    <div class="btndiv">
+                        <button id="btn_add">添加</button>
+                        <button id="btn_del">删除</button>
+                    </div>
+                    <div class="table">
+                        <div class="numberid_tr">序号</div>
+                        <div class="checkall_tr"><input type="checkbox" id="check_All"></div>
+                        <div class="userid_tr">用户ID</div>
+                        <div class="username_tr">用户姓名</div>
+                        <div class="class_tr">所属部门</div>
+                        <div class="kong"> </div>
+                    </div>
+                </div>
+
+
+                <div class="list center" id="list">
+                    <!-- 动态生成部分 -->
+                    <!-- <div class="table">
+                        <div class="numberid_tr">1</div>
+                        <div class="checkall_tr"><input type="checkbox" id="check_All"></div>
+                        <div class="userid_tr">007</div>
+                        <div class="username_tr">name</div>
+                        <div class="class_tr">CLass</div>
+                        <div class="edit">编辑</div>
+                    </div> -->
+                </div>
+
+                <div class="page">
+                    <span>首页</span>
+                    <span>上一页</span>
+                    <select class="changepage" id="changepage">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <span>下一页</span>
+                    <span>尾页</span>
+                    <span>页数 : 2</span>
+                    <span>总记录数 : 14</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="footer">
+        <p class="fl">当前用户 : 管理员</p>
+        <p class="fl">用户类型 : 系统管理员</p>
+        <p class="fr">协同办公管理平台----考勤子系统</p>
+    </div>
+
+
+    <!-- 一下是弹出block的新增,编辑修改界面 -->
+
+
+    <div id="adduserbox" class="adduserbox">
+        <p class="adduser_p fl">新增用户</p>
+        <p class="close fr">X</p>
+        <div class="adduser">
+            <p><span>*</span>用户ID :</p>
+            <input type="text" name="" id="addUserId">
+            <p><span>*</span>用户姓名 :</p>
+            <input type="text" name="" id="addUserName">
+            <p><span>*</span>用户类型 :</p>
+            <select name="" id="usertype">
+                <option value="">请选择</option>
+                <option value="超级管理员">超级管理员</option>
+                <option value="管理员">管理员</option>
+                <option value="员工">员工</option>
+            </select>
+            <p>所属部门 :</p>
+            <select name="" id="addDepartment">
+                <option value="">请选择</option>
+                <option value="素质拓展部">素质拓展部</option>
+                <option value="实训中心">实训中心</option>
+                <option value="景宁人力">景宁人力</option>
+                <option value="督导部">督导部</option>
+                <option value="武软共建学习教育部">武软共建学习教育部</option>
+            </select>
+            <p>手机 :</p>
+            <input type="text" id="usertel">
+            <div class="adduserinfo_btn">
+                <button class="saveBtn">保存</button>
+                <button class="cancelBtn">取消</button>
+            </div>
+        </div>
+    </div>
+    <div id="edituserbox" class="edituserbox">
+        <p class="edituser_p fl">编辑用户信息</p>
+        <p class="close fr">X</p>
+        <div class="edituser">
+            <p><span>*</span>用户ID :</p>
+            <input type="text" name="" id="edituserId">
+            <p><span>*</span>用户姓名 :</p>
+            <input type="text" name="" id="edituserName">
+            <p><span>*</span>用户类型 :</p>
+            <select name="" id="edituserClass">
+                <option value="">请选择</option>
+                <option value="超级管理员">超级管理员</option>
+                <option value="管理员">管理员</option>
+                <option value="员工">员工</option>
+            </select>
+            <p>所属部门 :</p>
+            <select name="" id="editDepartment">
+                <option value="">请选择</option>
+                <option value="素质拓展部">素质拓展部</option>
+                <option value="实训中心">实训中心</option>
+                <option value="景宁人力">景宁人力</option>
+                <option value="督导部">督导部</option>
+                <option value="武软共建学习教育部">武软共建学习教育部</option>
+            </select>
+            <p>手机 :</p>
+            <input type="text" id="editusertel">
+            <div class="edituserinfo_btn">
+                <button class="saveBtn">保存</button>
+                <button class="cancelBtn">取消</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+   
+</script>
+
 </html>

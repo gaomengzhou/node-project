@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.datepicker-box {
+    width: 200px;
+    height: 30px;
+    position: relative;
+    /* border: 1px solid red; */
+    display: inline-block;
+}
+
+.datepicker-box .datepicker-content {
+    position: absolute;
+    left: 0;
+    top: 34px;
+    width: 210px;
+    height: 240px;
+}
+
+.datepicker-content .datepicker-header {
+    width: 210px;
+    height: 30px;
+}
+
+.datepicker-header span {
+    float: left;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: aliceblue;
+    color: black;
+}
+
+.datepicker-header .datepicker-prev {
+    width: 20%;
+}
+
+.datepicker-header .datepicker-middle {
+    width: 60%;
+}
+
+.datepicker-header .datepicker-next {
+    width: 20%;
+}
+
+.datepicker-content .datepicker-th {
+    width: 210px;
+    height: 30px;
+}
+
+.datepicker-content .datepicker-th li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+    background-color: aliceblue;
+}
+
+.datepicker-tbody {
+    width: 210px;
+    height: 180px;
+}
+
+.datepicker-tbody li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+    background-color: aliceblue;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/Reset.css">
+    <link rel="stylesheet" href="../css/staff.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        #tanchu{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        #tanchu1{
+            width: 700px;
+            height: 350px;
+            margin:80px auto;
+            background-color: #bbd3eb;
+            border-radius: 10px;
+        }
+        .tou{
+            width: 100%;
+            height: 36px;
+            line-height: 36px;
+            border-bottom: 1px solid;
+        }
+        .tou span{
+            margin-left: 18px;
+        }
+        .tou button{
+            float: right;
+            margin-top: 6px;
+            margin-right: 20px;
+        }
+        .b{
+            margin: 10px;
+            font-size: 18px;
+        }
+        .content_qj{
+            width: 98%;
+            height: 260px;
+            margin: 10px auto;
+            background-color: aliceblue;
+            border: 1px solid #0080ff;
+            border-radius: 10px;
+        }
+        .content_qj p{
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 10px;
+        }
+        .biaodan{
+            width: 100%;
+            height: 200px;
+            background-color: pink;
+            margin-top: 12px;
+        }
+        #inp span{
+            color:red;
+        }
+        #inp input{
+            margin-top: 8px;
+        }
+        .content_qj button{
+            width: 80px;
+            height: 25px;
+            border-radius: 15px;
+            margin-top: 18px;
+            margin-left: 180px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="shouye">
+        <ul class="shouye_ul">
+            <li>
+                <h3>OA办公管理系统</h3>
+            </li>
+            <li>考勤子系统</li>
+        </ul>
+        <ul class="shouye_ul1">
+            <li><a href="../html/ygkaoqin.html">我的考勤</a></li>
+            <li><a href="#">请假申请</a></li>
+        </ul>
+        <ul class="shouye_ul2">
+            <li id="userinfo"><u>个人信息</u></li>
+            <li><u>退出</u></li>
+        </ul>
+    </div>
+    <div class="a">
+        <div class="a1">当前位置：申请请假</div>
+    </div>
+    <div class="content">
+        <div class="content_inp">
+            标题<input type="text">
+            申请时间<input id="start">到
+            <input id="end">
+            请假单状态：<input type="radio" name="order" checked value="id">待审批
+            <input type="radio" name="order" value="username">归档
+            <input type="checkbox" class="check-all">全部
+            <button id="btn_cx">查询</button>
+        </div>
+        <button id="btn1" style="margin-left: 50px;">请假</button>
+        <div id="content_2">
+            <ul id="th">
+                <li>请假单ID</li>
+                <li><u>申请人</u></li>
+                <li>标题</li>
+                <li><u>起始</u></li>
+                <li><u>结束</u></li>
+                <li><u>申请时间</u></li>
+                <li>请假单状态</li>
+                <li></li>
+            </ul>
+            <div id="tbody">
+                <!-- <ul class="tr">
+                    <li>1</li>
+                    <li>刘琦</li>
+                    <li>睡觉</li>
+                    <li>2016-1-1 8.25.11</li>
+                    <li>2016-1-1 8.25.11</li>
+                    <li>2016-1-1 8.25.11</li>
+                    <li>归档</li>
+                    <li id="libtn"><u>查看</u></li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="footer">
+        <p class="fl">当前用户 : 李振</p>
+        <p class="fl">用户类型 : 员工</p>
+        <p class="fr">协同办公管理平台----考勤子系统</p>
+    </div>
+
+    <div id="tanchu">
+        <div id="tanchu1">
+            <div class="tou">
+                <span id="gaibian">请假单详情</span>
+            </div>
+            <div class="b">请假信息</div>
+            <div class="content_qj">
+                <p style="margin-left: 50px;"> 请假单号:<input id="a_1"></p>
+                <p style="margin-left: 50px;">申请人:<input id="a_2"></p><br>
+                <div style="height:20px;"></div>
+                <div id="inp">
+                    <span>*</span>标题<input id="a_3" style="width:400px;margin-left: 24px;"><br>
+                    <span>*</span>起始时间<input id="a_4">
+                    <span>*</span>结束时间<input id="a_5"><br>
+                    <span>*</span>请假原因<input id="a_6" style="width:400px;height:100px;">
+                </div>
+                <button id="replyBtn">确定</button>
+                <button id="btn">取消</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

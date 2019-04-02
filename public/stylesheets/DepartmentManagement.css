@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+.top {
+    height: 85px;
+    background-color: #10a3e9;
+    overflow: hidden;
+    position: relative;
+}
+
+.top h3,
+.top h4 {
+    color: #fff;
+}
+
+.top .logo {
+    width: 300px;
+    margin-top: 27px;
+}
+
+.top h3 {
+    text-indent: 110px;
+}
+
+.top h4 {
+    text-indent: 137px;
+}
+
+.top span {
+    display: block;
+    width: 60px;
+    height: 30px;
+    margin-top: -20px;
+}
+
+.top span a {
+    color: #fff;
+}
+
+.top .selected {
+    width: 240px;
+    margin: auto;
+}
+
+.top .selected p {
+    width: 76px;
+    height: 30px;
+    background-color: #beeaf7;
+    border-radius: 5px 5px 0 0;
+    margin: 2px;
+    text-align: center;
+    line-height: 22px;
+}
+
+.top .selected p a {
+    color: #2b6f9c;
+}
+
+.header .bottom {
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    background-color: #beeaf7;
+    text-indent: 34px;
+    color: #062a64;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 3px 3px 3px #000;
+}
+
+.mainBox {
+    width: 100%;
+}
+
+.mainBox .main {
+    width: 99%;
+    border-top: 2px solid #87d0df;
+    border-left: 1px solid #87d0df;
+    border-right: 1px solid #87d0df;
+    border-bottom: 1px solid #87d0df;
+    margin-top: 5px;
+}
+
+
+.mainBox .main .maintop {
+    height: 21px;
+    background-color: #daf3fa;
+    border-top: 2px solid #fff;
+}
+
+.mainBox .main .login {
+    width: 550px;
+    height: 35px;
+    padding-top: 20px;
+}
+
+.mainBox .main .login button {
+    width: 70px;
+    height: 20px;
+    border-radius: 7px;
+    margin-left: 5px;
+}
+
+.main .checkedBox {
+    width: 320px;
+    overflow-x: scroll;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.main .checkedBox div {
+    width: 400px;
+}
+
+.main .listbox {
+    border-top: 1px solid #87d0df;
+}
+
+.listbox .list {
+    width: 926px;
+    overflow: hidden;
+}
+
+.list .btndiv {
+    border-bottom: 1px solid #87d0df;
+    width: 926px;
+    margin-top: 5px;
+}
+
+.list .btndiv button {
+    width: 50px;
+    height: 25px;
+}
+
+.list .table {
+    overflow: hidden;
+}
+
+.list .table div {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #c9d1d4;
+    border-top: 0;
+}
+.list .changepage{
+    width: 35px;
+}
+.list .page {
+    width: 310px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 80px;
+}
+.list .page span {
+    cursor: pointer;
+}
+
+.table .numberid_tr,
+.table .checkall_tr {
+    width: 120px;
+}
+
+.table .userid_tr {
+    width: 250px;
+}
+
+.table .username_tr {
+    width: 350px;
+}
+
+.table .class_tr {
+    width: 250px;
+}
+
+.table .kong {
+    width: 198px;
+}
+
+.table .edit {
+    width: 198px;
+}
+
+.footer {
+    height: 30px;
+    width: 100%;
+    background-color: #2193d9;
+    margin-top: 45px;
+}
+
+.footer p {
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.footer p:nth-child(1) {
+    text-indent: 5px;
+}
+
+.footer p:nth-child(2) {
+    text-indent: 30px;
+}
+
+
+.adduserbox {
+    width: 500px;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    margin: auto;
+    background-color: #b9d4ef;
+    overflow: hidden;
+    padding-bottom: 5px;
+    display: none;
+}
+
+.adduserbox .adduser_p {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    text-indent: 30px
+}
+
+.adduserbox .close {
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.adduserbox .adduser {
+    width: 330px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 15px 80px;
+    padding-bottom: 60px;
+}
+
+.adduserbox .adduser p {
+    width: 100px;
+    display: inline-block;
+
+}
+
+.adduserbox .adduser p span {
+    color: red;
+}
+
+.adduserbox .adduser input {
+    width: 220px;
+    margin-bottom: 15px;
+}
+
+.adduserbox .adduser select {
+    width: 224px;
+    margin-bottom: 15px;
+}
+
+.adduserbox .adduserinfo_btn {
+    width: 70px;
+    margin: auto;
+}
+
+
+
+
+
+
+.edituserbox {
+    width: 500px;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    margin: auto;
+    background-color: #b9d4ef;
+    overflow: hidden;
+    padding-bottom: 5px;
+    display: none;
+}
+
+.edituserbox .edituser_p {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    text-indent: 30px
+}
+
+.edituserbox .close {
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.edituserbox .edituser {
+    width: 330px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 15px 80px;
+    padding-bottom: 60px;
+}
+
+.edituserbox .edituser p {
+    width: 100px;
+    display: inline-block;
+
+}
+
+.edituserbox .edituser p span {
+    color: red;
+}
+
+.edituserbox .edituser input {
+    width: 220px;
+    margin-bottom: 15px;
+}
+
+.edituserbox .edituser select {
+    width: 224px;
+    margin-bottom: 15px;
+}
+
+.edituserbox .edituserinfo_btn {
+    width: 70px;
+    margin: auto;
+}

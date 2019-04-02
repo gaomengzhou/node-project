@@ -1,0 +1,212 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>考勤管理</title>
+    <link rel="stylesheet" href="../css/Reset.css">
+    <link href="../css/datepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/satrap.css">
+</head>
+
+<body>
+    <div id="header" class="header">
+        <div class="top center">
+            <div class="logo lf">
+                <h3>协同办公管理平台</h3>
+                <h4>考勤子系统</h4>
+            </div>
+
+            <span class="fr"><a href="#">退出</a></span>
+            <span class="fr"><a href="#">个人信息</a></span>
+
+            <div class="sel">
+                <p class="satrap fl"><a href="#">考勤管理</a></p>
+                <p class="satrapSet fl"><a href="#">请假审批</a></p>
+            </div>
+        </div>
+
+        <p class="bottom">当前位置:考勤管理</p>
+    </div>
+    <div class="mmmm">
+        <div class="main">
+            <a href="" class="daorua">导入考勤数据<input type="file" class="daoru"></a>
+            <ul>
+                <li>序号</li>
+                <li class="li1">学员ID</li>
+                <li class="li1">学员名</li>
+                <li class="li1">研发部</li>
+                <li>考勤信息</li>
+            </ul>
+
+            <div id="shixun">
+                <!-- <ul class="ul22">
+                <li>1</li>
+                <li>2026</li>
+                <li>李伟</li>
+                <li>实训中心</li>
+                <li class="li1">查看</li>
+            </ul> -->
+            </div>
+
+        </div>
+        <div id="main1">
+            <div class="main1top">
+                标题：<input type="text">
+                申请时间：<input type="text" id="start">
+                到<input type="text" id="end">
+                请假单状态：<input type="radio" name="na">待审批
+                <input type="radio" name="na">归档
+                <input type="radio" checked name="na">全部
+
+                申请人：<input type="text" id="apply">
+                <button class="mbtn">查询</button>
+            </div>
+            <ul class="ul1">
+                <li>请假单ID</li>
+                <li>申请人</li>
+                <li>标题</li>
+                <li>起始时间</li>
+                <li>结束时间</li>
+                <li>申请时间</li>
+                <li>请假单状态</li>
+                <li>&emsp;</li>
+            </ul>
+            <div id="tbody">
+                <!-- <ul class="ul11">
+                <li>1000</li>
+                <li>李珍</li>
+                <li>我要请假</li>
+                <li>2014-2-11 8:30:00</li>
+                <li>2014-2-11 13:50:00</li>
+                <li>2014-4-14 15:41:32</li>
+                <li>归档</li>
+                <li class="lick">查看</li>
+            </ul> -->
+            </div>
+        </div>
+
+    </div>
+    <div id="addbig">
+        <div class="addlook">
+            <div class="addhead">
+                <h3 class="h1">查看考勤</h3>
+                <button class="close">×</button>
+            </div>
+            <div class="addtime">
+                <select name="" id="">
+                    <option value="">2014</option>
+                    <option value="">2015</option>
+                    <option value="">2016</option>
+                    <option value="">2017</option>
+                    <option value="">2018</option>
+                    <option value="">2019</option>
+                </select>年
+                <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                    <option value="">9</option>
+                    <option value="">10</option>
+                    <option value="">11</option>
+                    <option value="">12</option>
+                </select>月
+                <button id="ck">查看</button>
+            </div>
+            <ul class="daka">
+                <li><strong>日期</strong></li>
+                <li><strong>星期</strong></li>
+                <li><strong>首次打卡时间</strong></li>
+                <li><strong>最后打卡时间</strong></li>
+                <li><strong>考勤状态</strong></li>
+            </ul>
+
+            <div id="dakacontent_1">
+            <!-- <ul class="dakacontent">
+                <li>2014-02-01</li>
+                <li>六</li>
+                <li>&emsp;</li>
+                <li>&emsp;</li>
+                <li>休假</li>
+            </ul> -->
+        </div>
+
+        </div>
+    </div>
+
+    <div id="addsmall">
+        <div id="smallz">
+            <div>
+                <h3 class="xq">请假单详情</h3>
+                <button class="close1">×</button>
+            </div>
+            <p>请假信息</p>
+            <div class="qjdh">
+                <span>请假单号：</span>
+                <span class="qj1">1002</span>
+                <span class="shen1">申请人：</span>
+                <span class="qj2">李珍</span>
+            </div>
+
+            <div class="bt">
+                *标题：
+                <input type="text" placeholder="送小孩上幼儿园" class="qj3">
+            </div>
+
+            <div class="qssj">
+                *起始时间：
+                <input type="text" placeholder="2014-02-19" class="qj4">
+                <select name="" id="">
+                    <option value="">8:30</option>
+                </select>
+                *结束时间：
+                <input type="text" placeholder="2014-02-19" class="qj5">
+                <select name="" id="">
+                    <option value="">17:00</option>
+                </select>
+            </div>
+
+            <div class="qjyy">
+                请假原因：
+                <textarea type="text" placeholder="送小孩上幼儿园" style="resize:none" class="qj6"></textarea>
+            </div>
+
+            <p>审批信息</p>
+
+            <ul class="spxx">
+                <li><span>申请时间：</span>
+                    <span>2014-04-14 15:43</span></li>
+                <li>*审批结果
+                    <select name="" id="">
+                        <option value="">同意</option>
+                        <option value="">拒绝</option>
+                    </select>
+                </li>
+                <li><span>审批人：</span><span>cjh</span></li>
+                <li><span>审批时间：</span><span>2014-04-14 15:43</span></li>
+                <li>
+                    备注：
+                    <textarea type="text" placeholder="送快点" style="resize:none"></textarea>
+                </li>
+            </ul>
+
+            <button id="qxbtn">取消</button>
+        </div>
+    </div>
+
+    <div id="footer" class="footer">
+        <p class="fl">当前用户 : 主管</p>
+        <p class="fl">用户类型 : 主管</p>
+        <p class="">协同办公管理平台----考勤子系统</p>
+    </div>
+</body>
+
+
+
+</html>

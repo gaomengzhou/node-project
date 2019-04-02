@@ -1,0 +1,145 @@
+.shouye {
+    width: 100%;
+    background: linear-gradient(#2d74d0, #43d2f4);
+    height: 100px;
+}
+
+.shouye_ul {
+    font-size: 20px;
+    color: aliceblue;
+    line-height: 50px;
+    width: 300px;
+    text-align: center;
+    float: left;
+}
+
+.shouye_ul1 {
+    float: left;
+    margin-left: 330px;
+    font-size: 16px;
+    color: blue;
+}
+
+.shouye_ul1 li {
+    float: left;
+    margin-left: 10px;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    background-color: aliceblue;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 72px;
+}
+
+.shouye_ul2 {
+    float: right;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.shouye_ul2 li {
+    float: left;
+    font-size: 18px;
+    margin-left: 20px;
+    color: aliceblue;
+}
+
+.a {
+    width: 100%;
+    background-color: #cef1f5;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+.a1 {
+    line-height: 24px;
+    margin-left: 15px;
+}
+
+.content {
+    width: 90%;
+    height: 550px;
+    border: 1px solid #c8d1da;
+    margin: 5px auto;
+}
+
+#content {
+    width: 90%;
+    text-align: center;
+    margin: 10px auto;
+}
+
+#content input {
+    margin: 0 auto;
+}
+
+#content_1 {
+    width: 98%;
+    overflow: hidden;
+    margin: 5px auto;
+}
+
+#content_1 ul {
+    width: 100%;
+    height: 30px;
+    margin-left: 60px;
+}
+
+#content_1 ul li {
+    float: left;
+    width: 18%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #d5f2fa;
+}
+
+.footer {
+    height: 30px;
+    width: 100%;
+    background-color: #2193d9;
+}
+
+.footer p {
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.footer p:nth-child(1) {
+    text-indent: 5px;
+}
+
+.footer p:nth-child(2) {
+    text-indent: 30px;
+}
+
+.content_inp {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#content_2 {
+    width: 98%;
+    overflow: hidden;
+    margin: 5px auto;
+}
+
+#content_2 ul {
+    width: 100%;
+    height: 30px;
+    margin-left: 20px;
+}
+
+#content_2 ul u {
+    color: blue;
+}
+
+#content_2 ul li {
+    float: left;
+    width: 12%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #d5f2fa;
+}

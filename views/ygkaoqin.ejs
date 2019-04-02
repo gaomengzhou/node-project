@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/Reset.css">
+    <link rel="stylesheet" href="../css/staff.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        #deng {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .info {
+            width: 400px;
+            height: 230px;
+            background-color: aliceblue;
+            margin: 200px auto;
+            border-radius: 10px;
+        }
+
+        .info_1 {
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid;
+            text-align: center;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+
+        .info_2 span {
+            margin-left: 80px;
+        }
+
+        .info_2 input {
+            margin-top: 20px;
+        }
+
+        .info_2 button {
+            margin-top: 25px;
+            margin-left: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="deng">
+        <div class="info">
+            <div class="info_1">
+                <h3>个人信息</h3>
+            </div>
+            <div class="info_2">
+                <span>新密码：</span><input style="margin-left: 20px;"><br>
+                <span>确认密码：</span><input style="margin-left: 8px;"><br>
+                <span>手机：</span><input style="margin-left: 30px;"><br>
+                <button id="btn">确认</button>
+                <button id="qx">取消</button>
+            </div>
+        </div>
+    </div>
+    <div class="shouye">
+        <ul class="shouye_ul">
+            <li>
+                <h3>OA办公管理系统</h3>
+            </li>
+            <li>考勤子系统</li>
+        </ul>
+        <ul class="shouye_ul1">
+            <li><a href="#">我的考勤</a></li>
+            <li><a href="../html/yhqingjia.html">请假申请</a></li>
+        </ul>
+        <ul class="shouye_ul2">
+            <li id="geren"><u>个人信息</u></li>
+            <li><u>退出</u></li>
+        </ul>
+    </div>
+    <div class="a">
+        <div class="a1">当前位置：我的考勤</div>
+    </div>
+    <div class="content">
+        <div id="content">
+            <input id="start"><strong>年</strong>
+            <input id="end"><strong>月</strong>
+            <button style="margin-left: 80px;" id="query">查看</button>
+        </div>
+
+        <div id="content_1">
+            <ul id="th">
+                <li>日期</li>
+                <li>星期</li>
+                <li>首次打卡时间</li>
+                <li>最后打卡时间</li>
+                <li>考勤状态</li>
+            </ul>
+            <div id="tbody">
+                <!-- <ul class="tr">
+                    <li>2017</li>
+                    <li>星期一</li>
+                    <li>2016-1-1 8.25.11</li>
+                    <li>2016-1-1 8.25.11</li>
+                    <li>休假</li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="footer">
+        <p class="fl">当前用户 : 李振</p>
+        <p class="fl">用户类型 : 员工</p>
+        <p class="fr">协同办公管理平台----考勤子系统</p>
+    </div>
+</body>
+
+
+</html>
