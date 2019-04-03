@@ -17,6 +17,7 @@
                 <h3>协同办公管理平台</h3>
                 <h4>考勤子系统</h4>
             </div>
+            <span class="fr"><button id="zhuceBtn" type="submit" onclick="location.href='/zhuce'">注册</button></span>
             <span class="fr"><button id="loginBtn" type="submit" onclick="location.href='/logout'">退出</button></span>
             <span class="fr"><button type="submit" onclick="location.href='/login'">登入</button></span>
             <div class="selected">
@@ -67,8 +68,21 @@
                     </div>
                 </div>
 
-
                 <div class="list center" id="list">
+               <%     result.map((item,index)=>{  %>
+
+                    <div class="table">
+                        <div class="numberid_tr">item.id</div>
+                        <div class="checkall_tr"><input type="checkbox" id="check_All"></div>
+                        <div class="userid_tr">item.userId</div>
+                        <div class="username_tr">item.username</div>
+                        <div class="class_tr">item.class</div>
+                        <div class="edit">编辑</div>
+                    </div>
+               <%     })   %>
+
+
+
                     <!-- 动态生成部分 -->
                     <!-- <div class="table">
                         <div class="numberid_tr">1</div>

@@ -13,12 +13,36 @@ var {
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', {
-    title: 'Express',
-    username: req.session.username
-  });
+
+  if (req.session.username) {
+    conn((err, db) => {
+      setError(err, res, db);
+      db.collection("users").find({}, {}).sort({
+        _id: -1
+      }).toArray((err, result) => {
+        setError(err, res, db);
+        res.render('index', {
+          result,
+          title: 'Express',
+          username: req.session.username
+        });
+        db.close;
+      })
+    })
+  } else {
+    res.send("<script>alert('session过期-请先登入');location.href='/login'</script>")
+  }
+
+
+
   console.log(req.session)
 });
+
+//注册
+router.get("/zhuce", (req, res) => {
+  res.render("zhuce")
+})
+
 
 //登入
 router.get("/login", (req, res) => {

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>注册</title>
+
+</head>
+
+<body>
+    <%- include common %>
+    <h2> 注册 - zhuce </h2>
+    <div class="container-fluid">
+        <div class="col-md-4 col-lg-4 col-sm-4">
+            <div class="row">
+                <form method="POST" action="/users/register">
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input type="text" name="username" class="form-control" id="username" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="dbpassword">确认密码</label>
+                        <input type="password" name="dbpassword" class="form-control" id="dbpassword"
+                            placeholder="确认密码">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" onclick="">注册</button>
+                    <button type="reset" class="btn btn-danger">重置</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
