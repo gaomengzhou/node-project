@@ -26,17 +26,18 @@ router.get('/', function (req, res, next) {
 router.post("/login", (req, res) => {
   var body = req.body;
   console.log(body);
-
+  body.password = body.password*1;
   conn((err, db) => {
     setError(err, res, db); // 封装 错误 回调函数 
     var findData = function (db, callback) {
       db.collection("users").findOne(body, {}, (err, result) => {
         setError(err, res, db);
-        callback(result)
-      })
+        callback(result);
+      });
     }
 
     findData(db, (result) => {
+      console.log(result);
       if (result) {
         console.log(req.session);
         req.session.username = body.username;
