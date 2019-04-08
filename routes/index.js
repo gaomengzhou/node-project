@@ -90,11 +90,37 @@ router.get("/userlist", (req, res) => {
   }
 })
 
+// router.get("/searchList", (req, res) => {
+//   var query = req.query;
+//   var keyword = query.keyword;
+//   if (req.session.username) {
+//     conn((err, db) => {
+//       setError(err, res, db);
+//       db.collection("users").find({
+//         $or: [{
+//             username: new RegExp(keyword)
+//           },
+//           {
+//             userId: new RegExp(keyword)
+//           }
+//         ]
+//       }, {}).toArray((err, result) => {
+//         setError(err, res, db);
+//         res.render("index", {
+//           result
+//         });
+//         db.close();
+//       })
+//     })
+//   } else {
+//     res.send("<script>alert('session已经过期,请重新登录...');location.href='/login' </script>")
+//   }
+// })
 
-
-
-
-
+router.get("/searchList", (req, res) => {
+  var query = req.query;
+  console.log(query);
+})
 
 
 

@@ -8,9 +8,11 @@
     <title>用户管理</title>
     <link rel="stylesheet" href="../stylesheets/Reset.css">
     <link rel="stylesheet" href="../stylesheets/admin.css">
+    <script src="/bootstrap/js/jquery-1.10.1.js"></script>
 </head>
 
 <body>
+
     <div id="header" class="header">
         <div class="top center">
             <div class="logo lf">
@@ -59,7 +61,7 @@
                         <button id="btn_del">删除</button>
                     </div>
                     <div class="table">
-                        <div class="numberid_tr">序号</div>
+                        <!-- <div class="numberid_tr">序号</div> -->
                         <div class="checkall_tr"><input type="checkbox" id="check_All"></div>
                         <div class="userid_tr">用户ID</div>
                         <div class="username_tr">用户姓名</div>
@@ -69,17 +71,17 @@
                 </div>
 
                 <div class="list center" id="list">
-               <%     result.map((item,index)=>{  %>
+                    <%     result.map((item,index)=>{  %>
 
                     <div class="table">
-                        <div class="numberid_tr">item.id</div>
+                        <!-- <div class="numberid_tr"><%- item.id %></div> -->
                         <div class="checkall_tr"><input type="checkbox" id="check_All"></div>
-                        <div class="userid_tr">item.userId</div>
-                        <div class="username_tr">item.username</div>
-                        <div class="class_tr">item.class</div>
+                        <div class="userid_tr"><%- item.userId %></div>
+                        <div class="username_tr"><%- item.username %></div>
+                        <div class="class_tr"><%- item.class %></div>
                         <div class="edit">编辑</div>
                     </div>
-               <%     })   %>
+                    <%     })   %>
 
 
 
@@ -188,7 +190,74 @@
 </body>
 
 <script>
+    $("#btn_add").click(function () {
+        var that = this;
+        $("#adduserbox").show();
+        $(".saveBtn").click(function () {
+            var html = "";
+            var userid = $("#addUserId").val();
+            var username = $("#addUserName").val();
+            var userclass = $("#usertype").val();
+            var usertitle = $("#addDepartment").val();
+            var usertel = $("#usertel").val();
+            html =
+                `
+                         <div class="table">
+                            <div class="check_tr"><input type="checkbox" class="check_One"></div>
+                            <div class="userid_tr">${userid}</div>
+                            <div class="username_tr">${username}</div>
+                            <div class="class_tr">${userclass}</div>
+                            <div class="edit">编辑</div>
+                         </div>
+                       `;
+            $("#list").append(html);
+            $("#adduserbox").hide();
+            $("#addUserId").val("");
+            $("#addUserName").val("");
+            $("#usertype").val("");
+            $("#addDepartment").val("");
+            $("#usertel").val("");
+        })
+    });
+    $(".cancelBtn").click(function () {
+        $("#adduserbox").hide();
+        $("#edituserbox").hide();
+    });
+    $(".close").click(function () {
+        $("#adduserbox").hide();
+        $("#edituserbox").hide();
+    });
 
+    // $.ajax({
+    //     type: "get",
+    //     url: "index.ejs",
+    //     dataType: "json",
+    //     success: function (obj) {
+    //         console.log(obj)
+
+    //     }
+    // })
+
+
+    $(".edit").click(function () {
+
+        var that = this;
+        // alert($(this).prev().prev().html());
+
+        $("#edituserbox").show();
+        $("#edituserId").val($(this).prev().prev().prev().html());
+        $("#edituserName").val($(this).prev().prev().html());
+        $("#editDepartment").val($(this).prev().html());
+
+        $(".saveBtn").click(function () {
+            $(that).prev().prev().prev().html($("#edituserId").val());
+            $(that).prev().prev().html($("#edituserName").val());
+            $(that).prev().html($("#editDepartment").val());
+
+            $("#edituserbox").hide();
+
+        });
+    });
 </script>
 
 </html>

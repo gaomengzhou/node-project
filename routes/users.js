@@ -95,11 +95,13 @@ router.post("/login", (req, res) => {
   var body = req.body;
   
   console.log(body);
-  body.password = body.password * 1;
+  // body.password = body.password*1;
   conn((err, db) => {
     setError(err, res, db);
     var findData = function (db, callback) {
       db.collection("users").findOne(body, {}, (err, result) => {
+        console.log(result);
+        console.log("xxxxxxxxx")
         setError(err, res, db);
         callback(result);
       });
@@ -120,7 +122,7 @@ router.post("/login", (req, res) => {
 
 
   })
-  // 查询 
+
 })
 
 
