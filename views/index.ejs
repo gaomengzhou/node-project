@@ -24,7 +24,7 @@
             <span class="fr"><button type="submit" onclick="location.href='/login'">登入</button></span>
             <div class="selected">
                 <p class="userAdmin fl"><a href="#">用户管理</a></p>
-                <p class="departmentAdmin fl"><a href="DepartmentManagement.html" id="">部门管理</a></p>
+                <p class="departmentAdmin fl"><a href="DepartmentManagement" id="">部门管理</a></p>
                 <p class="attendanceSettings fl"><a href="#">考勤设置</a></p>
             </div>
         </div>
@@ -39,8 +39,8 @@
             <div class="maintop"></div>
             <div class="login center">
                 <form action="get" class="loginInput fl">
-                    <label for="useridInput">用户ID : </label><input type="text" id="useridInput">
-                    <label for="usernameInput">用户名 : </label><input type="text" id="usernameInput">
+                    <label for="useridInput">搜索 : </label><input type="text" id="useridInput" placeholder="搜索关键、序列号">
+                    <!-- <label for="usernameInput">搜索 : </label><input type="text" id="usernameInput" placeholder="搜索关键、序列号"> -->
                     <span>部门 : </span>
                 </form>
                 <div class="checkedBox fl">
@@ -62,7 +62,7 @@
                     </div>
                     <div class="table">
                         <!-- <div class="numberid_tr">序号</div> -->
-                        <div class="checkall_tr"><input type="checkbox" id="check_All"></div>
+                        <div class="checkall_tr">全选<input type="checkbox" id="check_All"></div>
                         <div class="userid_tr">用户ID</div>
                         <div class="username_tr">用户姓名</div>
                         <div class="class_tr">所属部门</div>
@@ -75,7 +75,7 @@
 
                     <div class="table">
                         <!-- <div class="numberid_tr"><%- item.id %></div> -->
-                        <div class="checkall_tr"><input type="checkbox" id="check_All"></div>
+                        <div class="checkall_tr"><input type="checkbox" class="checkOne"></div>
                         <div class="userid_tr"><%- item.userId %></div>
                         <div class="username_tr"><%- item.username %></div>
                         <div class="class_tr"><%- item.class %></div>
@@ -228,15 +228,6 @@
         $("#edituserbox").hide();
     });
 
-    // $.ajax({
-    //     type: "get",
-    //     url: "index.ejs",
-    //     dataType: "json",
-    //     success: function (obj) {
-    //         console.log(obj)
-
-    //     }
-    // })
 
 
     $(".edit").click(function () {
@@ -265,6 +256,35 @@
     $("#search_btn").click(function () {
         location.href = "/searchList?keyword=" + $("#useridInput").val();
     });
+
+    var count = 0;
+    var maxCount = $(".checkOne").length;
+
+    $("#check_All").click(function () {
+        count = $(this).prop("checked") ? $(".checkOne").length : 0;
+        if ($("#check_All").prop("checked")) {
+            $(".checkOne").prop("checked", true);
+        } else {
+            $(".checkOne").prop("checked", false);
+        }
+        console.log("全选的count:"+count);
+    });
+
+    $("#list").on("click", ".checkOne", function () {
+        // alert($(this).parent().next().html());
+        if ($(this).prop("checked")) {
+            count++;
+            if (count == maxCount) {
+                $("#check_All").prop("checked", true);
+            }
+        } else {
+            count--;
+            $("#check_All").prop("checked", false);
+        }
+        console.log("单选的count:"+count);
+    });
+
+
 </script>
 
 </html>

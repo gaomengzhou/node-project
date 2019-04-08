@@ -117,7 +117,9 @@ router.get("/searchList", (req, res) => {
   }
 })
 
-
+router.get("/DepartmentManagement", (req, res) => {
+  res.render("DepartmentManagement");
+})
 
 
 
