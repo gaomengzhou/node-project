@@ -258,6 +258,13 @@
 
         });
     });
+
+    $("#search_btn").click(function () {
+        location.href = "/searchList?keyword=" + $("#usernameInput").val();
+    });
+    $("#search_btn").click(function () {
+        location.href = "/searchList?keyword=" + $("#useridInput").val();
+    });
 </script>
 
 </html>
